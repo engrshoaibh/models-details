@@ -79,8 +79,8 @@ export default function Home() {
       <RulerHUD onScrollTo={scrollToId} />
 
       {/* Main Architectural Page Shell */}
-      <div className="page-shell" id="pageShell">
-        <main>
+      <div className="page-shell max-w-full overflow-x-hidden" id="pageShell">
+        <main className="w-full max-w-full overflow-x-hidden">
           {/* 01 / CRAFTING APPS */}
           <HeroSection
             models={MODELS}

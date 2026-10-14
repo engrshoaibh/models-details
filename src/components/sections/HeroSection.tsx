@@ -138,7 +138,7 @@ export function HeroSection({
             </button>
           </div>
 
-          <div className="inline-flex flex-wrap border border-[var(--border-line)] font-mono mt-2">
+          <div className="inline-flex flex-wrap border border-[var(--border-line)] font-mono mt-2 max-w-full">
             <span className="px-3 py-1.5 text-[10.5px] tracking-[0.06em] uppercase text-[var(--text-primary)] font-semibold bg-[var(--bg-hover)] border-r border-[var(--border-line)] cursor-default">
               Filter Matrix
             </span>

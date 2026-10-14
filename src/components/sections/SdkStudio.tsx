@@ -192,7 +192,7 @@ console.log(response.output_text);`;
             <span className="text-[var(--accent-blue)] font-semibold">04 /</span>
             <span>GET STARTED · SDK STUDIO</span>
           </div>
-          <div className="text-[var(--text-muted)] text-[10.5px]">
+          <div className="hidden sm:block text-[var(--text-muted)] text-[10.5px]">
             AGENT-READY BOILERPLATE & SUBAGENT ROUTING
           </div>
         </div>
@@ -201,7 +201,7 @@ console.log(response.output_text);`;
 
       <section className="grid grid-cols-1 lg:grid-cols-[390px_1fr] border-b border-[var(--border-line)]">
         {/* Left Controls Pane */}
-        <div className="p-7 px-6 border-b lg:border-b-0 lg:border-r border-[var(--border-line)]">
+        <div className="p-4 sm:p-7 sm:px-6 border-b lg:border-b-0 lg:border-r border-[var(--border-line)] min-w-0">
           <h2 className="font-display text-[28px] leading-[1.1] mb-2.5">
             Agent-ready from <span className="font-serif-italic">day one.</span>
           </h2>
@@ -377,7 +377,7 @@ console.log(response.output_text);`;
         </div>
 
         {/* Right Code Viewer Pane */}
-        <div className="p-7 px-6 bg-[var(--workspace-bg)] text-[var(--workspace-text)] flex flex-col justify-between">
+        <div className="p-4 sm:p-7 sm:px-6 bg-[var(--workspace-bg)] text-[var(--workspace-text)] flex flex-col justify-between min-w-0 overflow-hidden">
           <div>
             <div className="flex justify-between items-center pb-2.5 mb-3 border-b border-[var(--workspace-border)] font-mono">
               <span className="text-[11px] text-white">

@@ -28,7 +28,7 @@ export function ShowcaseLineup({
             <span className="text-[var(--accent-blue)] font-semibold">02 /</span>
             <span>THE LINEUP</span>
           </div>
-          <div className="text-[var(--text-muted)] text-[10.5px]">
+          <div className="hidden sm:block text-[var(--text-muted)] text-[10.5px]">
             PICK A CRAFT TO EXPLORE
           </div>
         </div>

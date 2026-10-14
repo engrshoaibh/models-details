@@ -68,7 +68,7 @@ export function CostSimulator({ models }: CostSimulatorProps) {
             <span className="text-[var(--accent-blue)] font-semibold">02.C /</span>
             <span>TOKEN COST SIMULATOR</span>
           </div>
-          <div className="text-[var(--text-muted)] text-[10.5px]">
+          <div className="hidden sm:block text-[var(--text-muted)] text-[10.5px]">
             30-DAY WORKLOAD & PROMPT CACHE CALCULATOR
           </div>
         </div>
@@ -77,7 +77,7 @@ export function CostSimulator({ models }: CostSimulatorProps) {
 
       <section className="grid grid-cols-1 lg:grid-cols-[390px_1fr] border-b border-[var(--border-line)]">
         {/* Left Inputs Pane */}
-        <div className="p-7 px-6 border-b lg:border-b-0 lg:border-r border-[var(--border-line)]">
+        <div className="p-4 sm:p-7 sm:px-6 border-b lg:border-b-0 lg:border-r border-[var(--border-line)] min-w-0">
           <h2 className="font-display text-[30px] leading-[1.08] mb-2.5">
             Token economics, <span className="font-serif-italic">demystified.</span>
           </h2>
@@ -238,7 +238,7 @@ export function CostSimulator({ models }: CostSimulatorProps) {
         </div>
 
         {/* Right Outputs Breakdown */}
-        <div className="p-7 px-6 bg-[var(--workspace-bg)] text-[var(--workspace-text)]">
+        <div className="p-4 sm:p-7 sm:px-6 bg-[var(--workspace-bg)] text-[var(--workspace-text)] min-w-0 overflow-hidden">
           <div className="flex justify-between items-center mb-4 pb-2.5 border-b border-[var(--workspace-border)] font-mono flex-wrap gap-2">
             <span className="text-[11px] text-white font-medium">
               30-DAY VOLUME: {totalInM.toFixed(1)}M IN ({cachedInM.toFixed(1)}M HIT)
@@ -269,7 +269,7 @@ export function CostSimulator({ models }: CostSimulatorProps) {
               return (
                 <div
                   key={r.id}
-                  className="grid grid-cols-[160px_1fr_115px] items-center gap-3 py-1.5 border-b border-[var(--workspace-border)] last:border-b-0 text-[12px] font-mono"
+                  className="grid grid-cols-[110px_1fr_95px] sm:grid-cols-[160px_1fr_115px] items-center gap-2 sm:gap-3 py-1.5 border-b border-[var(--workspace-border)] last:border-b-0 text-[11px] sm:text-[12px] font-mono"
                 >
                   <div className="truncate text-white" title={r.name}>
                     {r.name}

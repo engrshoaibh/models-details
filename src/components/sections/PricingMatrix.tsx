@@ -131,14 +131,14 @@ export function PricingMatrix({
             <span className="text-[var(--accent-blue)] font-semibold">02.B /</span>
             <span>PRICING & SPECIFICATION MATRIX</span>
           </div>
-          <div className="text-[var(--text-muted)] text-[10.5px]">
+          <div className="hidden md:block text-[var(--text-muted)] text-[10.5px]">
             19 VERIFIED MODELS · USD PER 1M TOKENS
           </div>
         </div>
         <div className="draw-rule-line" />
       </div>
 
-      <section className="bg-[var(--bg-canvas)]">
+      <section className="bg-[var(--bg-canvas)] w-full max-w-full overflow-hidden">
         {/* Controls */}
         <div className="p-3.5 md:px-6 border-b border-[var(--border-line)] flex items-center justify-between gap-3 flex-wrap font-mono">
           <div className="flex gap-2 flex-wrap items-center">
@@ -181,12 +181,12 @@ export function PricingMatrix({
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search model name or API ID..."
-            className="h-[34px] px-3 bg-transparent border border-[var(--border-line)] text-[var(--text-primary)] text-[12px] min-w-[240px] focus:outline-none focus:border-[var(--accent-blue)] font-mono"
+            className="h-[34px] px-3 bg-transparent border border-[var(--border-line)] text-[var(--text-primary)] text-[12px] w-full sm:w-auto sm:min-w-[240px] focus:outline-none focus:border-[var(--accent-blue)] font-mono"
           />
         </div>
 
         {/* Table Viewport */}
-        <div className="overflow-x-auto border-b border-[var(--border-line)]">
+        <div className="overflow-x-auto border-b border-[var(--border-line)] w-full max-w-full">
           <table className="w-full border-collapse min-w-[980px] text-[12.5px]">
             <thead className="font-mono bg-[var(--bg-sunken)]">
               <tr>

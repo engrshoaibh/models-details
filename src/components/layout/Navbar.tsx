@@ -28,11 +28,11 @@ export function Navbar({ onOpenCmd, onScrollTo }: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-[110] w-full h-[54px] bg-[var(--bg-frosted)] backdrop-blur-[14px] border-b border-[var(--border-line)] flex items-stretch justify-between">
-      <div className="flex items-stretch">
+    <header className="sticky top-0 z-[110] w-full max-w-full overflow-hidden h-[54px] bg-[var(--bg-frosted)] backdrop-blur-[14px] border-b border-[var(--border-line)] flex items-stretch justify-between">
+      <div className="flex items-stretch min-w-0">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="w-[54px] border-r border-[var(--border-line)] flex items-center justify-center cursor-pointer hover:bg-[var(--bg-hover)] transition-colors p-2"
+          className="w-[44px] sm:w-[54px] shrink-0 border-r border-[var(--border-line)] flex items-center justify-center cursor-pointer hover:bg-[var(--bg-hover)] transition-colors p-1.5 sm:p-2"
           title="ModelCraft Home"
           aria-label="ModelCraft Home"
         >
@@ -104,7 +104,7 @@ export function Navbar({ onOpenCmd, onScrollTo }: NavbarProps) {
           </svg>
         </button>
 
-        <div className="flex items-center px-[18px] border-r border-[var(--border-line)] font-display text-[15px] font-semibold tracking-[-0.02em]">
+        <div className="flex items-center px-2.5 sm:px-[18px] border-r border-[var(--border-line)] font-display text-[13.5px] sm:text-[15px] font-semibold tracking-[-0.02em] whitespace-nowrap shrink-0">
           ModelCraft
         </div>
 
@@ -148,10 +148,10 @@ export function Navbar({ onOpenCmd, onScrollTo }: NavbarProps) {
         </nav>
       </div>
 
-      <div className="flex items-stretch">
+      <div className="flex items-stretch shrink-0">
         <button
           onClick={onOpenCmd}
-          className="w-[54px] border-l border-[var(--border-line)] flex items-center justify-center text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors cursor-pointer font-mono"
+          className="w-[42px] sm:w-[54px] shrink-0 border-l border-[var(--border-line)] flex items-center justify-center text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors cursor-pointer font-mono"
           title="Command Palette (Cmd+K)"
           aria-label="Open Command Palette"
         >
@@ -160,7 +160,7 @@ export function Navbar({ onOpenCmd, onScrollTo }: NavbarProps) {
 
         <button
           onClick={toggleTheme}
-          className="w-[54px] border-l border-[var(--border-line)] flex items-center justify-center text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors cursor-pointer"
+          className="w-[42px] sm:w-[54px] shrink-0 border-l border-[var(--border-line)] flex items-center justify-center text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors cursor-pointer"
           title="Toggle Dark / Light Theme"
           aria-label="Toggle Theme"
         >
@@ -173,10 +173,11 @@ export function Navbar({ onOpenCmd, onScrollTo }: NavbarProps) {
 
         <button
           onClick={() => onScrollTo("sec-simulator")}
-          className="border-l border-[var(--border-line)] px-5 bg-[var(--text-primary)] text-[var(--bg-canvas)] text-[11px] tracking-[0.06em] uppercase font-semibold font-mono flex items-center gap-2 hover:opacity-90 transition-opacity cursor-pointer"
+          className="border-l border-[var(--border-line)] px-2.5 sm:px-5 bg-[var(--text-primary)] text-[var(--bg-canvas)] text-[10.5px] sm:text-[11px] tracking-[0.06em] uppercase font-semibold font-mono flex items-center gap-1.5 sm:gap-2 hover:opacity-90 transition-opacity cursor-pointer shrink-0"
         >
-          <span>Launch Simulator</span>
-          <ArrowUpRight className="w-[14px] h-[14px]" strokeWidth={2} />
+          <span className="hidden sm:inline">Launch Simulator</span>
+          <span className="sm:hidden text-[10px]">Simulator</span>
+          <ArrowUpRight className="w-[13px] h-[13px] sm:w-[14px] sm:h-[14px]" strokeWidth={2} />
         </button>
       </div>
     </header>

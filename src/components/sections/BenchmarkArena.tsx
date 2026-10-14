@@ -140,7 +140,7 @@ export function BenchmarkArena() {
             <span className="text-[var(--accent-blue)] font-semibold">02.D /</span>
             <span>BENCHMARK ARENA</span>
           </div>
-          <div className="text-[var(--text-muted)] text-[10.5px]">
+          <div className="hidden sm:block text-[var(--text-muted)] text-[10.5px]">
             VERIFIED EVALUATION SCORES VS. BLENDED COST
           </div>
         </div>
@@ -149,7 +149,7 @@ export function BenchmarkArena() {
 
       <section className="grid grid-cols-1 lg:grid-cols-[390px_1fr] border-b border-[var(--border-line)]">
         {/* Left Suite Switcher & Leaderboard */}
-        <div className="p-7 px-6 border-b lg:border-b-0 lg:border-r border-[var(--border-line)]">
+        <div className="p-4 sm:p-7 sm:px-6 border-b lg:border-b-0 lg:border-r border-[var(--border-line)] min-w-0">
           <h2 className="font-display text-[30px] leading-[1.08] mb-2.5">
             Every frontier lab, <span className="font-serif-italic">benchmarked.</span>
           </h2>
@@ -232,7 +232,7 @@ export function BenchmarkArena() {
         </div>
 
         {/* Right Recharts Viewport */}
-        <div className="p-7 px-6 bg-[var(--workspace-bg)] text-[var(--workspace-text)] flex flex-col justify-between">
+        <div className="p-4 sm:p-7 sm:px-6 bg-[var(--workspace-bg)] text-[var(--workspace-text)] flex flex-col justify-between min-w-0 overflow-hidden">
           <div>
             <div className="flex justify-between items-center mb-3 font-mono flex-wrap gap-2">
               <span className="text-[11.5px] text-white font-medium">

@@ -15,7 +15,7 @@ export function DispatchesGrid() {
             <span className="text-[var(--accent-blue)] font-semibold">03 /</span>
             <span>PRINCIPLES & DISPATCHES</span>
           </div>
-          <div className="text-[var(--text-muted)] text-[10.5px]">
+          <div className="hidden sm:block text-[var(--text-muted)] text-[10.5px]">
             SHARED BY EVERY CRAFT
           </div>
         </div>
