@@ -13,6 +13,7 @@ import { CostSimulator } from "@/components/sections/CostSimulator";
 import { BenchmarkArena } from "@/components/sections/BenchmarkArena";
 import { DispatchesGrid } from "@/components/sections/DispatchesGrid";
 import { SdkStudio } from "@/components/sections/SdkStudio";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { CommandPalette } from "@/components/ui/CommandPalette";
 import { Toast } from "@/components/ui/Toast";
 
@@ -121,6 +122,9 @@ export default function Home() {
             onCopySnippet={handleCopySnippet}
             onOpenCmd={() => setIsCmdOpen(true)}
           />
+
+          {/* 05 / FREQUENTLY ASKED QUESTIONS & SEO KNOWLEDGE BASE */}
+          <FaqSection />
         </main>
 
         <Footer />

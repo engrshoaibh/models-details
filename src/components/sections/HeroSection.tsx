@@ -52,13 +52,17 @@ export function HeroSection({
       {/* Hero Content Section */}
       <section className="p-6 md:p-10 lg:px-10 lg:py-12 flex flex-col lg:flex-row items-center justify-between gap-10">
         <div className="flex-1 min-w-0">
-          <h1 className="font-display text-[clamp(40px,5vw,72px)] leading-[0.98] mb-5">
-            Nineteen models. One <span className="font-serif-italic">craft.</span>
+          <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.08em] px-2.5 py-1 mb-4 rounded border border-[var(--border-strong)] bg-[var(--bg-hover)] text-[var(--accent-blue)]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-emerald)] animate-pulse" />
+            <span>Verified 2026 Telemetry · 19 Frontier AI Models</span>
+          </div>
+          <h1 className="font-display text-[clamp(34px,4.5vw,64px)] leading-[1.02] mb-5">
+            LLM Pricing Comparison &amp; Token Cost{" "}
+            <span className="font-serif-italic">Calculator.</span>
           </h1>
           <p className="text-[clamp(15px,1.2vw,17.5px)] text-[var(--text-muted)] max-w-[58ch] leading-[1.55] mb-7">
-            Agentic coding, frontier reasoning, 10M-token repository context,
-            prompt-caching multipliers, real-time voice, and open-weight
-            Mixture-of-Experts. Verified October 2026 telemetry and API pricing
+            Compare real-time LLM pricing per 1M tokens, prompt-caching discounts,
+            batch API economics, and verified coding benchmark rankings (Terminal-Bench &amp; FrontierCode)
             across{" "}
             <a
               href="https://developers.openai.com/api/docs/models"

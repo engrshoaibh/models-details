@@ -140,6 +140,12 @@ export function Navbar({ onOpenCmd, onScrollTo }: NavbarProps) {
             03/Principles
           </button>
           <button
+            onClick={() => onScrollTo("faq")}
+            className="px-[11px] py-[6px] text-[12px] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors cursor-pointer"
+          >
+            FAQ
+          </button>
+          <button
             onClick={() => onScrollTo("get-it")}
             className="px-[11px] py-[6px] text-[12px] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-hover)] transition-colors cursor-pointer"
           >

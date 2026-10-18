@@ -29,6 +29,7 @@ const RULER_SECTIONS = [
   { id: "apps", label: "FRONTIER MODELS" },
   { id: "lineup", label: "LINEUP" },
   { id: "principles", label: "PRINCIPLES" },
+  { id: "faq", label: "FAQ & GUIDE" },
   { id: "get-it", label: "GET STARTED" },
 ];
 
