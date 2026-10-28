@@ -86,6 +86,21 @@ export function CommandPalette({
       },
     },
     {
+      label: "Jump to Engineering Blog & Guides",
+      tag: "Landmark",
+      action: () => {
+        onScrollTo("blog");
+        onClose();
+      },
+    },
+    {
+      label: "Gemini 4 Argon Missing in Antigravity (Fix)",
+      tag: "Guide",
+      action: () => {
+        window.location.href = "/blog/gemini-4-argon-not-showing-in-antigravity-ide-fix";
+      },
+    },
+    {
       label: "Toggle Dark / Light Theme",
       tag: "Theme",
       action: () => {

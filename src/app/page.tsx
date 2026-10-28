@@ -14,6 +14,7 @@ import { BenchmarkArena } from "@/components/sections/BenchmarkArena";
 import { DispatchesGrid } from "@/components/sections/DispatchesGrid";
 import { SdkStudio } from "@/components/sections/SdkStudio";
 import { FaqSection } from "@/components/sections/FaqSection";
+import { BlogSection } from "@/components/sections/BlogSection";
 import { CommandPalette } from "@/components/ui/CommandPalette";
 import { Toast } from "@/components/ui/Toast";
 
@@ -125,6 +126,9 @@ export default function Home() {
 
           {/* 05 / FREQUENTLY ASKED QUESTIONS & SEO KNOWLEDGE BASE */}
           <FaqSection />
+
+          {/* 06 / ENGINEERING BLOG & GUIDES */}
+          <BlogSection />
         </main>
 
         <Footer />
