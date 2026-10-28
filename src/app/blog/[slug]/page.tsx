@@ -2,9 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { BLOG_POSTS, BlogPost } from "@/data/blog";
-import { ArrowLeft, Calendar, Clock, Tag, Share2, BookOpen } from "lucide-react";
+import { BLOG_POSTS } from "@/data/blog";
+import { ArrowLeft, Calendar, Clock, Tag, Sparkles, AlertCircle } from "lucide-react";
 import { getSiteUrl } from "@/lib/site";
+import { MarkdownContent } from "@/components/blog/MarkdownContent";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -64,7 +65,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-[var(--bg-canvas)] text-[var(--text-primary)]">
-      {/* Top Bar */}
+      {/* Top Header Bar */}
       <header className="sticky top-0 z-50 w-full h-[54px] bg-[var(--bg-frosted)] backdrop-blur-[14px] border-b border-[var(--border-line)] flex items-center justify-between px-4 md:px-8">
         <Link
           href="/"
@@ -73,13 +74,13 @@ export default async function BlogPostPage({ params }: PageProps) {
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to ModelCraft Directory</span>
         </Link>
-        <span className="font-display font-semibold text-[14px]">ModelCraft Blog</span>
+        <span className="font-display font-semibold text-[14px] tracking-tight">ModelCraft Engineering Blog</span>
       </header>
 
       {/* Main Container */}
       <main className="max-w-4xl mx-auto px-5 py-10 md:py-16">
         {/* Breadcrumb / Category */}
-        <div className="flex items-center gap-2 font-mono text-[11px] text-[var(--text-muted)] mb-4">
+        <div className="flex items-center gap-2 font-mono text-[11px] text-[var(--text-muted)] mb-5">
           <Link href="/" className="hover:text-[var(--text-primary)]">Home</Link>
           <span>/</span>
           <Link href="/#blog" className="hover:text-[var(--text-primary)]">Blog</Link>
@@ -88,7 +89,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
 
         {/* Article Header */}
-        <h1 className="font-display text-[clamp(28px,4.5vw,52px)] font-bold leading-[1.08] tracking-tight mb-5">
+        <h1 className="font-display text-[clamp(28px,4.5vw,50px)] font-bold leading-[1.12] tracking-tight mb-5">
           {post.title}
         </h1>
 
@@ -107,16 +108,15 @@ export default async function BlogPostPage({ params }: PageProps) {
           <span>By {post.author}</span>
         </div>
 
-        {/* Lead Excerpt */}
-        <div className="p-4 md:p-6 mb-8 rounded-sm bg-[var(--bg-sunken)] border-l-2 border-[var(--accent-blue)] text-[15px] md:text-[16px] leading-relaxed text-[var(--text-primary)] font-medium">
-          {post.excerpt}
+        {/* Lead Summary Callout */}
+        <div className="p-5 md:p-6 mb-10 rounded-sm bg-[var(--bg-sunken)] border-l-4 border-[var(--accent-blue)] flex items-start gap-3.5 text-[15px] md:text-[16px] leading-relaxed text-[var(--text-primary)] font-medium">
+          <Sparkles className="w-5 h-5 text-[var(--accent-blue)] shrink-0 mt-0.5" />
+          <div>{post.excerpt}</div>
         </div>
 
-        {/* Article Body */}
-        <article className="prose prose-invert max-w-none text-[15px] md:text-[16px] leading-[1.8] text-[var(--text-primary)]">
-          <div className="whitespace-pre-line font-sans">
-            {post.content}
-          </div>
+        {/* Formatted Article Body */}
+        <article className="max-w-none">
+          <MarkdownContent content={post.content} />
         </article>
 
         {/* Tags */}
@@ -137,14 +137,14 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Bottom Navigation */}
+        {/* Bottom Call to Action */}
         <div className="mt-12 p-6 rounded-sm border border-[var(--border-line)] bg-[var(--bg-sunken)] flex items-center justify-between flex-wrap gap-4">
           <div>
             <div className="font-display font-semibold text-[16px] mb-1">
               Explore Live 2026 Model Telemetry
             </div>
             <p className="text-[13px] text-[var(--text-muted)]">
-              Compare Gemini 4 Argon against 19 other frontier models with verified benchmarks.
+              Compare Gemini 4 Argon against 19 other frontier models with verified pricing and benchmarks.
             </p>
           </div>
           <Link

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { BLOG_POSTS, BlogPost } from "@/data/blog";
 import { BookOpen, Calendar, Clock, ArrowRight, Tag, ChevronDown, ChevronUp } from "lucide-react";
+import { MarkdownContent } from "@/components/blog/MarkdownContent";
 
 export function BlogSection() {
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
@@ -132,9 +133,9 @@ export function BlogSection() {
 
                 {/* Expanded Article Body (Inline Reader) */}
                 {isExpanded && (
-                  <div className="mt-7 pt-6 border-t border-[var(--border-line)] prose prose-invert max-w-none text-[14px] leading-relaxed text-[var(--text-primary)]">
-                    <div className="p-6 md:p-8 bg-[var(--bg-sunken)] border border-[var(--border-line)] rounded-sm whitespace-pre-line font-sans">
-                      {post.content}
+                  <div className="mt-7 pt-6 border-t border-[var(--border-line)]">
+                    <div className="p-6 md:p-8 bg-[var(--bg-sunken)] border border-[var(--border-line)] rounded-sm">
+                      <MarkdownContent content={post.content} />
                     </div>
                   </div>
                 )}
