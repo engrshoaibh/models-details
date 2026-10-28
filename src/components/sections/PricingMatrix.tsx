@@ -132,7 +132,7 @@ export function PricingMatrix({
             <span>PRICING & SPECIFICATION MATRIX</span>
           </div>
           <div className="hidden md:block text-[var(--text-muted)] text-[10.5px]">
-            19 VERIFIED MODELS · USD PER 1M TOKENS
+            20 VERIFIED MODELS · USD PER 1M TOKENS
           </div>
         </div>
         <div className="draw-rule-line" />

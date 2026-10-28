@@ -12,7 +12,7 @@ export function Footer() {
           and agentic evaluations.
         </p>
         <div className="font-mono text-[10.5px] text-[var(--text-muted)]">
-          © 2026 MODELCRAFT · SNAPSHOT 2026-10-14
+          © 2026 MODELCRAFT · SNAPSHOT 2026-10-28
         </div>
       </div>
 
@@ -28,7 +28,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="hover:text-[var(--accent-blue)] transition-colors"
             >
-              OpenAI GPT-6 Astra & Sol ↗
+              OpenAI GPT-6 Astra, Sol & Terra ↗
             </a>
           </li>
           <li>
@@ -117,6 +117,16 @@ export function Footer() {
           Release Notes
         </div>
         <ul className="flex flex-col gap-[7px] text-[13px] list-none p-0 m-0">
+          <li>
+            <a
+              href="https://developers.openai.com/api/docs/models"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--accent-blue)] transition-colors"
+            >
+              GPT-6.1 Terra Launch (Oct 26) ↗
+            </a>
+          </li>
           <li>
             <a
               href="https://www.anthropic.com/claude-haiku-5-5"

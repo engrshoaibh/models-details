@@ -14,7 +14,7 @@ interface HeroSectionProps {
 }
 
 const PROVIDERS: { label: string; value: string }[] = [
-  { label: "All (19)", value: "ALL" },
+  { label: "All (20)", value: "ALL" },
   { label: "Anthropic", value: "Anthropic" },
   { label: "OpenAI", value: "OpenAI" },
   { label: "Google", value: "Google" },
@@ -43,7 +43,7 @@ export function HeroSection({
             <span>FRONTIER MODELS</span>
           </div>
           <div className="hidden sm:block text-[var(--text-muted)] text-[10.5px]">
-            NINETEEN MODELS · OPEN BENCHMARKS · PURE TELEMETRY
+            TWENTY MODELS · OPEN BENCHMARKS · PURE TELEMETRY
           </div>
         </div>
         <div className="draw-rule-line" />
@@ -54,7 +54,7 @@ export function HeroSection({
         <div className="flex-1 min-w-0">
           <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.08em] px-2.5 py-1 mb-4 rounded border border-[var(--border-strong)] bg-[var(--bg-hover)] text-[var(--accent-blue)]">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-emerald)] animate-pulse" />
-            <span>Verified 2026 Telemetry · 19 Frontier AI Models</span>
+            <span>Verified 2026 Telemetry · 20 Frontier AI Models</span>
           </div>
           <h1 className="font-display text-[clamp(34px,4.5vw,64px)] leading-[1.02] mb-5">
             LLM Pricing Comparison &amp; Token Cost{" "}
@@ -125,7 +125,7 @@ export function HeroSection({
               onClick={() => onScrollTo("sec-matrix")}
               className="bg-[var(--text-primary)] text-[var(--bg-canvas)] border border-[var(--text-primary)] px-5 py-3 text-[11.5px] tracking-[0.06em] uppercase font-semibold inline-flex items-center gap-2.5 cursor-pointer hover:opacity-90 hover:-translate-y-0.5 transition-all"
             >
-              <span>Explore All 19 Models</span>
+              <span>Explore All 20 Models</span>
               <span>▾</span>
             </button>
             <button

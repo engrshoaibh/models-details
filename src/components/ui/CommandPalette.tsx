@@ -122,7 +122,7 @@ export function CommandPalette({
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search 19 models, benchmarks, or jump to section..."
+          placeholder="Search 20 models, benchmarks, or jump to section..."
           className="w-full p-4 px-4.5 bg-transparent border-none border-b border-[var(--border-line)] text-[var(--text-primary)] text-[13.5px] font-mono focus:outline-none"
         />
 

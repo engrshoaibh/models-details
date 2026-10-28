@@ -83,7 +83,7 @@ export function CostSimulator({ models }: CostSimulatorProps) {
           </h2>
           <p className="text-[13.5px] text-[var(--text-muted)] mb-4.5 leading-normal">
             Model how prompt cache hit ratios and 50% Batch API discounts shift
-            your 30-day production spend across all 19 models.
+            your 30-day production spend across all 20 models.
           </p>
 
           {/* Preset Buttons Grid */}

@@ -2,6 +2,13 @@ import { Dispatch } from "@/types";
 
 export const DISPATCHES: Dispatch[] = [
   {
+    num: "00 · OCT 26, 2026",
+    title: "GPT-6.1 Terra — Cost-Efficient Agentic Vision Model",
+    body: "OpenAI released GPT-6.1 Terra (gpt-6.1-terra) at $1.00/$5.00 per 1M tokens — 50% cheaper than GPT-6.1 Sol — with a 1.05M-token context window, 128K max output, adaptive reasoning effort (none to max), native computer-use, and visual reasoning. Terra scores 50.3% on Terminal-Bench 4.0 (max effort) and 57.6% on the Agents' Last Exam at medium effort, making it OpenAI's sharpest cost-intelligence entry for agentic pipelines.",
+    tags: ["GPT-6.1-TERRA", "$1.00/$5.00 PER 1M", "COMPUTER USE", "OCT 26 GA"],
+    url: "https://developers.openai.com/api/docs/models",
+  },
+  {
     num: "01 · OCT 13, 2026",
     title: "Gemini 4 Argon Promotional Window ($2/$10)",
     body: "Google's flagship Gemini 4 Argon (with 1M long-decode output) runs at $2.00/1M input and $10.00/1M output through November 30, 2026 before stepping to $4/$20 on December 1. Batch and Flex tiers cut costs 50% to $1/$5.",
