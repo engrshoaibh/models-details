@@ -3,6 +3,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { ExternalLink } from "lucide-react";
 
 interface MarkdownContentProps {
   content: string;
@@ -35,15 +36,23 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
           p: ({ node, ...props }) => (
             <p className="text-[15px] md:text-[16px] leading-[1.8] mb-5 text-[var(--text-primary)]/90" {...props} />
           ),
-          a: ({ node, href, ...props }) => (
-            <a
-              href={href}
-              target={href?.startsWith("http") ? "_blank" : undefined}
-              rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="text-[var(--accent-blue)] underline underline-offset-4 decoration-[var(--accent-blue)]/40 hover:decoration-[var(--accent-blue)] transition-colors font-medium"
-              {...props}
-            />
-          ),
+          a: ({ node, href, children, ...props }) => {
+            const isExternal = href?.startsWith("http");
+            return (
+              <a
+                href={href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                className="inline-flex items-center gap-1 font-semibold text-[#3B82F6] hover:text-[#60A5FA] underline underline-offset-4 decoration-[#3B82F6]/50 hover:decoration-[#60A5FA] transition-colors"
+                {...props}
+              >
+                <span>{children}</span>
+                {isExternal && (
+                  <ExternalLink className="w-3 h-3 inline-block shrink-0 opacity-80" />
+                )}
+              </a>
+            );
+          },
           ul: ({ node, ...props }) => (
             <ul className="list-disc pl-6 mb-5 space-y-2 text-[15px] md:text-[16px]" {...props} />
           ),
@@ -70,7 +79,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
             if (isInline) {
               return (
                 <code
-                  className="font-mono text-[13px] px-1.5 py-0.5 rounded bg-[var(--bg-sunken)] border border-[var(--border-line)] text-[var(--accent-blue)]"
+                  className="font-mono text-[13px] px-1.5 py-0.5 rounded bg-[var(--bg-sunken)] border border-[var(--border-line)] text-[var(--accent-blue)] font-semibold"
                   {...props}
                 >
                   {children}
